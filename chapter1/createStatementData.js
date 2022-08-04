@@ -54,17 +54,11 @@ export function createStatementData_1_6(invoice,plays){
     }
     // 5. volumeCredits 변수제거 - 반복문 분리 > 문장슬라이드 > 함수 추출 > 변수 인라인
     function totalVolumeCredits(data) {
-        // for (let perf of data.performances) {
-        //     volumeCredits += perf.volumeCredits;
-        // }
         return data.performances
         .reduce((total,p)=>total+p.volumeCredits,0);  // for > reduce 파이프라인 적용
     }
     // 6. totalAmount 변수 제거 - 반복문분리 > 문장슬라이드 > 함수추출 > 변수인라인
     function totalAmount(data) {
-        // for (let perf of data.performances) {
-        //     result += perf.amount;
-        // }
         return data.performances
         .reduce((total,p)=>total+p.amount,0); // for > reduce 파이프라인 적용
     }
