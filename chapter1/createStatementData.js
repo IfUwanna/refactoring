@@ -1,5 +1,5 @@
 // 1.6 > step1 데이터 생성
-export default function createStatementData(invoice,plays){
+export function createStatementData_1_6(invoice,plays){
 
     const statementData = {};
     statementData.customer = invoice.customer;

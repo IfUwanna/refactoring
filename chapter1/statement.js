@@ -1,5 +1,4 @@
-import  createStatementData from './createStatementData'
-// import {createStatementData} from "./createStatementData.js";
+import {createStatementData_1_6} from "./createStatementData.js";
 /**
  * 1-1 Let's start
  * */
@@ -135,7 +134,7 @@ export function statement_1_4(invoice, plays) {
  * 1.6 계산 단계와 포맷팅 단계 분리하기
  * */
 export function statement_1_6(invoice, plays) {
-    return renderPlainText_1_6(createStatementData(invoice,plays));
+    return renderPlainText_1_6(createStatementData_1_6(invoice,plays));
 }
 
 // 1.6 > Step2. Text 렌더링 함수
