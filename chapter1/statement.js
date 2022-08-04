@@ -1,4 +1,4 @@
-import {createStatementData_1_6} from "./createStatementData.js";
+import {createStatementData_1_6,createStatementData_1_8} from "./createStatementData.js";
 /**
  * 1-1 Let's start
  * */
@@ -136,9 +136,10 @@ export function statement_1_4(invoice, plays) {
 export function statement_1_6(invoice, plays) {
     return renderPlainText_1_6(createStatementData_1_6(invoice,plays));
 }
-
-// 1.6 > Step2. Text 렌더링 함수
-function renderPlainText_1_6(data,plays){
+export function htmlStatement_1_6(invoice, plays) {
+    return renderHtml_1_6(createStatementData_1_6(invoice,plays));
+}
+function renderPlainText_1_6(data){
     let result = `청구 내역 (고객명: ${data.customer})\n`;
 
     for (let perf of data.performances) {
@@ -148,47 +149,32 @@ function renderPlainText_1_6(data,plays){
     result += `총액: ${usd(data.totalAmount)}\n`;
     result += `적립 포인트: ${data.totalVolumeCredits}점\n`;
     return result;
-
-//-----------------------------------------------------------------------------
-    // format
-    function usd(aNumber) {
-        return new  Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 2,
-        }).format(aNumber/100);
+}
+function renderHtml_1_6(data) {
+    let result = `<h1>청구 내역 (고객명: ${data.customer})</h1>\n`;
+    result += "<table>\n";
+    result += "<tr><th>play</th><th>석</th><th>cost</th></tr>";
+    for (let perf of data.performances) {
+        result += `  <tr><td>${perf.play.name}</td><td>${perf.audience}</td>`;
+        result += `<td>${usd(perf.amount)}</td></tr>\n`;
     }
-
+    result += "</table>\n";
+    result += `<p>총액: <em>${usd(data.totalAmount)}</em></p>\n`;
+    result += `<p>적립 포인트: <em>${data.totalVolumeCredits}</em>점</p>\n`;
+    return result;
+}
+// format
+function usd(aNumber) {
+    return new  Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+    }).format(aNumber/100);
 }
 
-
-export function plays() {
-    return {
-        hamlet: {name: "Hamlet", type: "tragedy"},
-        "as-like": {name: "As You Like It", type: "comedy"},
-        othello: {name: "Othello", type: "tragedy"},
-    };
-}
-
-
-export function invoices() {
-    return [
-        {
-            customer: "BigCo",
-            performances: [
-                {
-                    playID: "hamlet",
-                    audience: 55,
-                },
-                {
-                    playID: "as-like",
-                    audience: 35,
-                },
-                {
-                    playID: "othello",
-                    audience: 40,
-                },
-            ],
-        },
-    ];
+/**
+ * 1.8 다형성을 활용해 계산코드 재구성하기 ( 조건부 로직을 다형성으로 )
+ **/
+export function statement_1_8(invoice, plays) {
+    return renderPlainText_1_6(createStatementData_1_8(invoice,plays));
 }
