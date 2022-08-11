@@ -1,5 +1,4 @@
 
-
 console.log(`result : ${calculator([1, 2, 3, 4, 5])}`);
 
 function calculator(arr) {
@@ -15,3 +14,4 @@ function calculator(arr) {
 
     return result;
 }
+

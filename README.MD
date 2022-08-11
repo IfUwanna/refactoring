@@ -15,7 +15,7 @@ https://github.com/WegraLee/Refactoring#readme
 1.9 상태 점검: 다형성을 활용하여 데이터 생성하기  
 1.10 마치며
 
-### CHAPTER 02 리팩터링 원칙
+### CHAPTER 02 리팩터링 원칙 - 22/08/11
 2.1 리팩터링 정의  
 2.2 두 개의 모자  
 2.3 리팩터링하는 이유  
