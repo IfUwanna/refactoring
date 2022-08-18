@@ -28,7 +28,7 @@ https://github.com/WegraLee/Refactoring#readme
 2.10 리팩터링 자동화  
 2.11 더 알고 싶다면  
 
-### CHAPTER 03 코드에서 나는 악취
+### CHAPTER 03 코드에서 나는 악취 - 22/08/18
 3.1 기이한 이름  
 3.2 중복 코드    
 3.3 긴 함수  
