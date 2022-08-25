@@ -54,7 +54,7 @@ https://github.com/WegraLee/Refactoring#readme
 3.23 상속 포기  
 3.24 주석  
 
-### CHAPTER 04 테스트 구축하기
+### CHAPTER 04 테스트 구축하기 - 22/08/25
 4.1 자가 테스트 코드의 가치  
 4.2 테스트할 샘플 코드  
 4.3 첫 번째 테스트  
@@ -63,7 +63,7 @@ https://github.com/WegraLee/Refactoring#readme
 4.6 경계 조건 검사하기  
 4.7 끝나지 않은 여정  
 
-### CHAPTER 05 리팩터링 카탈로그 보는 법
+### CHAPTER 05 리팩터링 카탈로그 보는 법 - 22/08/25
 5.1 리팩터링 설명 형식  
 5.2 리팩터링 기법 선정 기준  
 
