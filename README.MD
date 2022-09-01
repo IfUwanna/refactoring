@@ -67,7 +67,7 @@ https://github.com/WegraLee/Refactoring#readme
 5.1 리팩터링 설명 형식  
 5.2 리팩터링 기법 선정 기준  
 
-### CHAPTER 06 기본적인 리팩터링
+### CHAPTER 06 기본적인 리팩터링 - 22/09/01 ~  
 6.1 함수 추출하기  
 6.2 함수 인라인하기  
 6.3 변수 추출하기  
